@@ -1,1 +1,72 @@
-this is a test file
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust | Travel Query Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Wanderlust</h1>
+            <p>Plan your perfect getaway in seconds.</p>
+        </header>
+
+        <section class="search-section glass-panel">
+            <form id="travel-form">
+                <div class="input-group">
+                    <label for="destination">Where to?</label>
+                    <input type="text" id="destination" placeholder="e.g., Paris, Tokyo, Maui" required>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="duration">Duration (Days)</label>
+                        <input type="number" id="duration" min="1" max="30" value="3" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="search-btn">
+                    <span class="btn-text">Find Adventures</span>
+                    <span class="loader hidden"></span>
+                </button>
+            </form>
+        </section>
+
+        <div id="results-container" class="results-container hidden">
+            <section class="results-section">
+                <h2><span class="icon">✈️</span> Available Flights</h2>
+                <div id="flights-list" class="cards-grid">
+                    <!-- Flight cards injected here -->
+                </div>
+            </section>
+
+            <section class="results-section">
+                <h2><span class="icon">🏨</span> Top Hotels</h2>
+                <div id="hotels-list" class="cards-grid">
+                    <!-- Hotel cards injected here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
